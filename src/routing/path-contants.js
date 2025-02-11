@@ -6,4 +6,3 @@ export  const PathConstants = {
   CUSTOMER: '/Customer',
   SETTINGS: '/Settings',
 };
-

@@ -1,13 +1,11 @@
 import {  createAsyncThunk } from '@reduxjs/toolkit';
-import { baseapi } from '../../api/Api';
-
-
+import { axiosInstance } from '../../api/axiosInstance';
 
 export const register = createAsyncThunk(
   'auth/register',
   async (data) => {
     try {
-    const response = await baseapi.post('/Auth/register',data);
+    const response = await axiosInstance.post('/Auth/register',data);
     return response.data;
 
     } catch (error) {
@@ -16,10 +14,9 @@ export const register = createAsyncThunk(
   }
 );
 
-
 export const Userlogin = async (data) => {
   try {
-    const response = await baseapi.post(`/Auth/Login?Email=${data.username}&Password=${data.password}`);
+    const response = await axiosInstance.post(`/Auth/Login?Email=${data.username}&Password=${data.password}`);
     return response.data;
 
     } catch (error) {

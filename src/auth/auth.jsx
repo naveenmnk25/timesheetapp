@@ -15,29 +15,30 @@ export const AuthProvider = ({ children }) => {
   const Login = async (username, password) => {
     try {
         console.log(username, password);
-        const userdata={
-    "customerId": 5,
-    "firstName": "Naveenkumar",
-    "lastName": "m",
-    "dateOfBirth": "2000-05-02",
-    "gender": "M",
-    "email": "naveen252000kumar@gmail.com",
-    "phoneNumber": "09080691892",
-    "accountCreationDate": "2024-12-08T04:44:09.227",
-    "isActive": true,
-    "createdDate": "2024-12-08T10:14:09.243",
-    "createdBy": null,
-    "modifiedDate": "2024-12-08T10:14:09.243",
-    "modifiedBy": null,
-    "createdByNavigation": null,
-    "customerAddresses": [],
-    "modifiedByNavigation": null
-};
-         localStorage.setItem("user", JSON.stringify(userdata));
-        localStorage.setItem("token", "hj");
-        localStorage.setItem("role", "Admin");
-        setUser(userdata);
-        return;
+        const userdata = 
+        {
+          "customerId": 5,
+          "firstName": "Naveenkumar",
+          "lastName": "m",
+          "dateOfBirth": "2000-05-02",
+          "gender": "M",
+          "email": "naveen252000kumar@gmail.com",
+          "phoneNumber": "09080691892",
+          "accountCreationDate": "2024-12-08T04:44:09.227",
+          "isActive": true,
+          "createdDate": "2024-12-08T10:14:09.243",
+          "createdBy": null,
+          "modifiedDate": "2024-12-08T10:14:09.243",
+          "modifiedBy": null,
+          "createdByNavigation": null,
+          "customerAddresses": [],
+          "modifiedByNavigation": null
+        };
+      localStorage.setItem("user", JSON.stringify(userdata));
+      localStorage.setItem("token", "hj");
+      localStorage.setItem("role", "Admin");
+      setUser(userdata);
+      return;
       // Dispatch login action and await for the result
       const responseData =await Userlogin({username, password}); // Ensure login is an async action
 

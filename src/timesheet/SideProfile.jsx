@@ -11,10 +11,10 @@ function SideProfile() {
               style={{ width: "150px", height: "150px", objectFit: "cover" }}
             />
 
-            <div class="position-absolute start-50 translate-middle-x bottom-0 ">
-              <span class="badge bg-primary rounded-pill px-3 py-2">
+            <div className="position-absolute start-50 translate-middle-x bottom-0 ">
+              <span className="badge bg-primary rounded-pill px-3 py-2">
                 Design Team
-                <span class="visually-hidden">Team name</span>
+                <span className="visually-hidden">Team name</span>
               </span>
             </div>
           </div>
