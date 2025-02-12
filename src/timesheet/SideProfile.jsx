@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { showMessage } from "../utils/messageUtil";
 import { fetchTotalHoursForMonth } from "../services/QueryServices/totalHoursForMonthService";
 import { fetchTotalHoursForYear } from "../services/QueryServices/totalHoursForYearService";
+import profilePhoto from "../assets/my_profile.jpg";
 
 function SideProfile() {
   const [totalHoursMonth, setTotalHoursMonth] = useState(0);
@@ -35,10 +36,10 @@ function SideProfile() {
   return (
     <div className="row">
       <div className="col-12 h-100">
-        <div className="text-center">
+        <div className="text-center mt-4">
           <div className="position-relative d-inline-block">
             <img
-              src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+              src={profilePhoto}
               className="rounded-circle mb-3"
               alt="Profile Photo"
               style={{ width: "150px", height: "150px", objectFit: "cover" }}
